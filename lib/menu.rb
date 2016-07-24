@@ -48,12 +48,12 @@ class Menu
 
   def shop(choice)
     if self.cart.items.count == 0
-      add_to_cart choice.to_i
+      self.add_to_cart choice.to_i
     elsif choice == 'n'
       self.checkout
     elsif choice.to_i.is_a? Numeric
       self.banner
-      add_to_cart get_user_input.to_i
+      self.add_to_cart self.get_user_input.to_i
     end
   end
 
