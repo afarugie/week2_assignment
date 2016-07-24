@@ -62,6 +62,6 @@ class Menu
   end
 end
 
-m = Menu.new
-puts m.welcome, m.banner
-m.shop m.get_user_input
+menu = Menu.new
+puts menu.welcome, menu.banner
+menu.shop menu.get_user_input
