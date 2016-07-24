@@ -21,8 +21,7 @@ class Menu
   end
 
   def banner
-    output = ""
-    puts "Enter the number next to the product you would like to purchase."
+    output = "Enter the number next to the product you would like to purchase.\n"
     @items.each_with_index do |value, index|
       output << "#{index}- #{value.name} -$#{(value.price / 100.0).to_f}\n"
     end
