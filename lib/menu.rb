@@ -33,7 +33,6 @@ class Menu
     output = "Total Items:\n"
     @cart.items.each do |key, value|
       output << "#{key.name}: $#{(key.price / 100.0).to_f} x #{value} = $#{((key.price * value) / 100.0).to_f}\n"
-      output << "#{
     end
     puts output, "Total: $#{@cart.total}"
   end
