@@ -2,7 +2,7 @@ require_relative 'item'
 require_relative 'cart'
 
 class Menu
-  attr_accessor :cart, :items
+  attr_reader :cart, :items
 
   def initialize 
     @cart = Cart.new
