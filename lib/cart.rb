@@ -1,4 +1,5 @@
-require 'bigdecimal'
+require_relative 'money'
+include Money
 
 class Cart
   def initialize
@@ -19,7 +20,7 @@ class Cart
       cost = key.price * value
       total += cost
     end
-    (total / 100.0).to_f
+    total.to_dollars
   end
 
   def items

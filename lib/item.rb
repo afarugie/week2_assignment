@@ -1,10 +1,11 @@
-require 'bigdecimal'
+require_relative 'money'
+include Money
 
 class Item
   attr_accessor :price, :name
 
   def initialize(name, price)
     @name = name
-    @price = BigDecimal.new((price * 100).to_i)
+    @price = price.to_cents
   end
 end
